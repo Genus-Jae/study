@@ -1,0 +1,37 @@
+# 가상환경
+*venv*/
+*env/
+
+# 파이썬 캐시
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# DB 접속정보 / 민감정보
+.env
+*.env
+config.py
+db_config.py
+
+# 데이터 / 실행 / 모델 파일
+data/
+*.csv
+*.xlsx
+*.json
+*.exe
+*.pkl
+*.dat
+*.db
+
+# 웹크롤링 수집 이미지/문서
+web_crawling/movie_images/
+*.jpg
+*.jpeg
+*.pdf
+
+# 운영체제 자동생성 파일
+.DS_Store
+Thumbs.db
+
+# 에디터 설정
+.vscode/
