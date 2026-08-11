@@ -14,7 +14,14 @@ datasets/
 *.csv
 *.tsv
 *.jsonl
-
+*.model
+*.model.*.npy
+*.vocab
+*.txt
+*.bin
+*.bin.gz
+*.xml
+gnews_model_wv
 # 환경변수와 비밀정보
 .env
 .env.*
