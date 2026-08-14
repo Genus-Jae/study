@@ -1,0 +1,15 @@
+# Jupyter notebook runtime
+ipykernel==7.3.0
+
+# Data analysis and visualization
+numpy==2.5.1
+pandas==3.0.5
+matplotlib==3.11.1
+seaborn==0.13.2
+
+# NLP and machine learning
+# Required NLTK data: punkt, punkt_tab, stopwords
+nltk==3.10.2
+scikit-learn==1.9.0
+spacy==3.8.14
+konlpy==0.6.0

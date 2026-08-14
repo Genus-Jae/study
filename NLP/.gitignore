@@ -18,9 +18,17 @@ datasets/
 *.model.*.npy
 *.vocab
 *.txt
+!requirements.txt
 *.bin
 *.bin.gz
 *.xml
+*.part
+*.keras
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
 gnews_model_wv
 # 환경변수와 비밀정보
 .env
@@ -32,6 +40,3 @@ gnews_model_wv
 .idea/
 .DS_Store
 Thumbs.db
-
-# 학습 환경 의존성 목록
-requirements.txt
