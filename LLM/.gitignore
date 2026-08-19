@@ -1,0 +1,50 @@
+# 가상환경
+nlp_venv/
+.venv/
+venv/
+
+# Python 캐시
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# 데이터
+data/
+datasets/
+*.csv
+*.tsv
+*.jsonl
+*.model
+*.model.*.npy
+*.vocab
+*.txt
+!requirements.txt
+*.bin
+*.bin.gz
+*.xml
+*.part
+*.keras
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.mp3
+
+# 로컬에서 저장한 Hugging Face 모델/체크포인트
+bert-base/
+**/nsmc_model/
+
+# 미완성 개인 실험 노트북
+09_transfer_learning/image_generator.ipynb
+
+gnews_model_wv
+# 환경변수와 비밀정보
+.env
+.env.*
+!.env.example
+
+# IDE 및 운영체제 파일
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
