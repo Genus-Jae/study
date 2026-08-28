@@ -49,3 +49,4 @@ gnews_model_wv
 .idea/
 .DS_Store
 Thumbs.db
+chroma_db/
