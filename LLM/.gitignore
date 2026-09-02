@@ -31,6 +31,8 @@ datasets/
 *.mp3
 *.pdf
 db/
+.bak
+
 # 로컬에서 저장한 Hugging Face 모델/체크포인트
 bert-base/
 **/nsmc_model/

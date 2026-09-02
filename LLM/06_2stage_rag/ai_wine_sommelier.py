@@ -1,0 +1,134 @@
+from dotenv import load_dotenv
+
+from langchain_core.prompts import ChatPromptTemplate, HumanMessagePromptTemplate
+from langchain.chat_models import init_chat_model
+from langchain_core.output_parsers import StrOutputParser
+from langchain_core.runnables import RunnableLambda
+from langchain_openai import OpenAIEmbeddings
+from langchain_pinecone import PineconeVectorStore
+
+
+load_dotenv()
+
+
+system_prompt = """
+당신은 식재료와 조리 과학을 이해하는 전문 푸드 칼럼니스트입니다.
+사용자가 제공한 음식 이미지를 보고 요리명과 풍미를 한국어로 묘사하세요.
+
+맛, 향, 식감과 조리법의 관계를 구체적으로 표현하세요.
+답변은 맛에 대한 묘사만 줄글 형식으로 50자 이내로 작성하세요.
+"""
+
+
+def describe_dish_flavor(query: dict):
+    temp = [
+        {
+            "text": "사용자가 제공한 이미지의 요리명과 풍미를 묘사해 주세요."
+        }
+    ]
+
+    if query.get("image_urls"):
+        temp += [
+            {
+                "image_url": {
+                    "url": image_url
+                }
+            }
+            for image_url in query.get("image_urls")
+        ]
+
+    if query.get("text"):
+        temp += [
+            {
+                "text": query.get("text")
+            }
+        ]
+
+    prompt = ChatPromptTemplate.from_messages([
+        ("system", system_prompt),
+        HumanMessagePromptTemplate.from_template(temp)
+    ])
+
+    llm = init_chat_model("gpt-5.6-luna")
+    output_parser = StrOutputParser()
+
+    chain = prompt | llm | output_parser
+
+    return chain
+
+
+def search_wine_review(query: str):
+    embeddings = OpenAIEmbeddings(
+        model="text-embedding-3-small"
+    )
+
+    vector_store = PineconeVectorStore(
+        index_name="winemag-data",
+        embedding=embeddings
+    )
+
+    docs = vector_store.similarity_search(
+        query,
+        k=5
+    )
+
+    return {
+        "dish_flavor": query,
+        "wine_reviews": "\n\n".join(
+            doc.page_content for doc in docs
+        )
+    }
+
+
+def recommend_wines(query: dict):
+    prompt = ChatPromptTemplate.from_messages([
+        (
+            "system",
+            """
+당신은 와인과 음식의 조화를 설계하는 경험이 풍부한 소믈리에입니다.
+
+사용자가 준비한 요리에 잘 어울리는 와인을 추천하세요.
+
+1. 요리의 재료, 소스와 조리법을 분석하세요.
+2. 와인의 산도, 당도, 타닌과 바디감을 고려하세요.
+3. 해당 와인이 음식과 어울리는 이유를 구체적으로 설명하세요.
+4. 제공된 와인 리뷰 정보 안에서만 추천하세요.
+"""
+        ),
+        (
+            "human",
+            """
+와인 페어링 추천에 있어 아래에 제시된 요리와 풍미,
+와인 리뷰만을 기초로 답변해 주세요.
+
+## 요리와 풍미
+
+{dish_flavor}
+
+## 와인 리뷰 정보
+
+{wine_reviews}
+"""
+        )
+    ])
+
+    llm = init_chat_model("gpt-5.6-luna")
+    output_parser = StrOutputParser()
+
+    chain = prompt | llm | output_parser
+
+    return chain
+
+
+def ai_wine_sommelier_rag(query: dict):
+    dish_flavor_chain = RunnableLambda(describe_dish_flavor)
+    search_wine_review_chain = RunnableLambda(search_wine_review)
+    recommend_wines_chain = RunnableLambda(recommend_wines)
+
+    chain = (
+        dish_flavor_chain
+        | search_wine_review_chain
+        | recommend_wines_chain
+    )
+
+    return chain.stream(query)
