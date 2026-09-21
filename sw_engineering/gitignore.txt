@@ -213,5 +213,8 @@ results/
 *.jpg
 model/
 
+/config.local
+/tmp
+/cache
 
 # End of https://www.toptal.com/developers/gitignore/api/python,venv
