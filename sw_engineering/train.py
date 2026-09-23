@@ -19,7 +19,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 # 모델 학습
 model = RandomForestClassifier(
-    n_estimators=100,  # 결정 트리 100개를 사용
+    #n_estimators=100,  # 결정 트리 100개를 사용
     random_state=42,   # 실행 결과 재현을 위한 랜덤 시드
 )
 

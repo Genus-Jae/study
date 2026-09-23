@@ -1,5 +1,19 @@
+/config.local
+/tmp
+/cache
+
 # Created by https://www.toptal.com/developers/gitignore/api/python,venv
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,venv
+
+
+# Python 가상환경
+sw_venv/
+venv/
+.venv/
+
+# Python 캐시
+__pycache__/
+*.pyc
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
