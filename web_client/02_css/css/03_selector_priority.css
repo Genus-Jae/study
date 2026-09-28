@@ -1,0 +1,19 @@
+#title {
+  color: red; /* override 금지 */
+  text-decoration: underline;
+}
+
+#box {
+  width: 100px;
+  height: 100px;
+  border: 3px solid blue;
+  background-color: burlywood;
+}
+
+/* 동1(div), 은1(.foo), 은1([title]) */
+div.foo[title=box] {
+  background-color: pink; 
+}
+.foo {
+  background-color: aquamarine !important; /* 오버라이드 금지 */
+}

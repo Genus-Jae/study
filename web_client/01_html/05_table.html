@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML | Table</title>
+  <style>
+    table {
+      border: 2px solid black;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      border: 2px solid black;
+      padding: 5px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Table</h1>
+  <!-- table태그의 구조 
+
+    <table>
+      행구분 태그
+      <thead>
+        행태그
+        <tr>
+          셀태그
+          <th>제목셀</th>
+          <td>내용셀<td>
+          ...
+        </tr>
+      </thead>
+      <tbody></tbody>
+      <tfoot></tfoot>
+    </table>
+  -->
+
+  <h2>Browser Table</h2>
+  <table>
+    <caption>웹브라우져 표</caption>
+    <thead>
+      <tr>
+        <th>브라우져명</th>
+        <th>제조사</th>
+        <th>홈페이지</th>
+      </tr>
+    </thead>
+    <!-- tbody>(tr>td*3)*3 -->
+    <tbody>
+      <tr>
+        <td>Edge</td>
+        <td>MS</td>
+        <td><a href="https://microsoft.com">https://microsoft.com</a></td>
+      </tr>
+      <tr>
+        <td>Chrome</td>
+        <td>Google</td>
+        <td><a href="https://google.com">https://google.com</a></td>
+      </tr>
+      <tr>
+        <td>Safari</td>
+        <td>Apple</td>
+        <td><a href="https://apple.com">https://apple.com</a></td>
+      </tr>
+    </tbody>
+    <!-- tfoot>tr>th*2 -->
+    <tfoot>
+      <tr>
+        <th>총개수</th>
+        <th colspan="2">3</th>
+      </tr>
+    </tfoot>
+  </table>
+
+  <h2> rowspan | colspan</h2>
+  <!-- 행확장(세로) rowspan -->
+  <!-- 열확장(가로) colspan -->
+
+  <table id="resume">
+    <thead>
+      <tr>
+        <th colspan="4">자기소개</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th colspan="2" rowspan="2" style="width: 120px; height: 150px;">사진</th>
+        <th style="width: 80px;">이름</th>
+        <td style="width: 150px;"></td>
+      </tr>
+      <tr>
+        <th>연락처</th>
+        <td></td>
+      </tr>
+      <tr>
+        <th style="width: 70px;">주소</th>
+        <td colspan="3"></td>
+      </tr>
+      <tr>
+        <th style="height: 100px;">자기소개</th>
+        <td colspan="3"></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <h2>@실습문제: 환율고시표</h2>
+
+  <img src="https://cdn.discordapp.com/attachments/1432666682282999900/1468475256355164351/currency.png?ex=698427a8&is=6982d628&hm=cb014165f180c42da6c21de83c8e08a0d2112fba42804e231a1fca558e4fe5ee&" alt="">
+
+  <table>
+    <thead style="background-color: #faf9c0;">
+      <tr>
+        <th rowspan="2" style="height: 100px">통화</th>
+        <th rowspan="2">매매<br>기준율</th>
+        <th colspan="2">현찰 매매율</th>
+        <th colspan="2">전신환 매매율</th>
+        <th rowspan="2">T/C<br>매도율</th>
+      </tr>
+      <tr>
+        <th>매도율</th>
+        <th>매입율</th>
+        <th>매도율</th>
+        <th>매입율</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- tr>td{1,023.00}*5 -->
+       <tr>
+        <td style="height: 100px">미국(USD)</td>
+        <td>1,023.00</td>
+        <td>1,023.00</td>
+        <td>1,023.00</td>
+        <td>1,023.00</td>
+        <td>1,023.00</td>
+        <td>1,023.00</td>
+       </tr>
+    </tbody>
+  </table>
+
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML | Link</title>
+</head>
+
+<body>
+  <h1>Link</h1>
+  <h2>target</h2>
+  <a href="./" target="_self">인덱스 현재탭에서 열기</a>
+  <a href="./" target="_blank">인덱스 새탭에서 열기</a>
+
+  <h2>Image Link</h2>
+  <a href="./">
+    <img 
+      src="../assets/image/hyunta.jpg" 
+      width="150px" alt="">
+  </a>
+
+  <img src="../assets/image/img1.jpg" width="200px" alt="" usemap="#imgmap">
+  <map name="imgmap">
+    <!-- 
+      area 
+        shape 영역모양 rect | circle | poly
+        coords 좌표 x1, y1, x2, y2
+        href 링크 
+        alt
+        target 
+
+      https://www.image-map.net/ 이미지 쉽게 생성하는 사이트
+    -->
+    <area shape="rect" coords="0,0, 100,200" href="https://naver.com" alt="네이버 가기">
+    <area shape="rect" coords="100,0, 200,200" href="https://google.com" alt="구글 가기">
+  </map>
+
+
+  <h2>Anchor Link</h2>
+  <div>
+    <ul>
+      <li><a href="#content1">내용1</a></li>
+      <li><a href="#content2">내용2</a></li>
+      <li><a href="#content3">내용3</a></li>
+      <li><a href="#:~:text=sit amet consectetur adipisicing elit.">하이라이팅 북마크</a></li>
+    </ul>
+  </div>
+  <div>
+    <h3 id="content1">Content1</h3>
+    <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima amet aperiam dicta quisquam architecto
+        quidem voluptatem laborum commodi explicabo voluptatum iste tempora corporis nulla autem culpa, quis doloremque
+        dolorum distinctio!</span><span>Error blanditiis recusandae minima quo modi repellendus unde pariatur deserunt
+        illo itaque sit ipsa facere quae rem natus quia, accusamus at harum commodi illum velit minus quos consequuntur?
+        In, at?</span></p>
+  </div>
+  <div>
+    <h3 id="content2">Content2</h3>
+    <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ab illo consequuntur veritatis, vel
+        architecto repellendus unde ea cum in voluptatem rem obcaecati neque dolores magnam voluptate aut quibusdam
+        eos?</span><span>Nesciunt cupiditate aliquid doloremque quos a, ad assumenda, officiis id magnam provident
+        repellat sed commodi dolore molestiae asperiores. Eius vero cumque dolorum consequatur illum laborum
+        exercitationem consectetur veniam dolore rem.</span></p>
+  </div>
+  <div>
+    <h3 id="content3">Content3</h3>
+    <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum labore at laudantium temporibus sed eius
+        consectetur praesentium culpa, eligendi, illo cum ducimus ratione odit tenetur. Dignissimos nesciunt sed eum
+        itaque!</span><span>Laborum error rem debitis ipsam corporis, modi obcaecati unde eaque asperiores natus, at
+        accusantium esse officiis eum dolore temporibus. Dicta doloremque officiis praesentium voluptatum aspernatur
+        laborum at ullam excepturi eius.</span></p>
+  </div>
+  <div>
+    <h3 id="content4">Content4</h3>
+    <p><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi explicabo iste, nemo quam neque aperiam?
+        A pariatur, velit provident neque aliquid tempore nostrum animi, quas repellendus perferendis sapiente? Earum,
+        consequuntur!</span><span>Consequuntur sequi ipsum cumque culpa illo necessitatibus esse voluptate aliquam id
+        impedit, minima dolor quo tempora iste repellendus explicabo? Similique ducimus mollitia deleniti repellat
+        excepturi animi temporibus pariatur nesciunt voluptatem!</span></p>
+  </div>
+  <div>
+    <h3 id="content5">Content5</h3>
+    <p><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate dolores minus non architecto libero
+        itaque dicta facere asperiores. Tempore optio reiciendis consequuntur praesentium obcaecati distinctio numquam
+        laudantium natus exercitationem reprehenderit.</span><span>Aut molestias nam eius, quos dolor obcaecati. Quia,
+        architecto repellendus sapiente consequatur quasi quae molestiae, esse voluptate culpa eaque voluptatem sint at
+        facilis a distinctio cumque ut et? Voluptas, quo?</span></p>
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <div>
+    <ul>
+      <li><a href="#content1">내용1</a></li>
+      <li><a href="#content2">내용2</a></li>
+      <li><a href="#content3">내용3</a></li>
+      <li><a href="#top">맨위로</a></li>
+    </ul>
+  </div>
+
+
+
+</body>
+
+</html>

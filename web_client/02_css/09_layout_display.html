@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS | Layout - Display</title>
+  <link rel="stylesheet" href="css/09_layout_display.css">
+</head>
+<body>
+  <h1>Layout - Display</h1>
+  <span>inline</span>
+  <div>block</div>
+  <!-- 
+    inline요소 - display: inline; 
+      - span, a, img...
+
+    block요소 - display: block;
+      - hn, div, p, form...
+  -->  
+  <!-- div.block.color$*5 -->
+  <div class="block d-inline color1">하나</div>
+  <div class="block d-inline color2">둘</div>
+  <div class="block d-inline color3">셋</div>
+  <div class="block d-inline color4">넷</div>
+  <div class="block d-inline color5">다섯</div>
+
+  <hr>
+
+  <span class="block d-block color1">하나</span>
+  <span class="block d-block color2">둘</span>
+  <span class="block d-block color3">셋</span>
+  <span class="block d-block color4">넷</span>
+  <span class="block d-block color5">다섯</span>
+
+  <hr>
+  
+  <div class="block d-inline-block color1">하나</div>
+  <div class="block d-inline-block color2">둘</div>
+  <div class="block d-inline-block color3">셋</div>
+  <div class="block d-inline-block color4">넷</div>
+  <div class="block d-inline-block color5">다섯</div>
+
+  <h2>요소숨기기</h2>
+  <!-- 
+    - display: none; 차지하는 영역도 함께 제거.
+    - visibility: hidden; 차지하는 영역은 남기고 제거.
+    - opacity: 0; 차지하는 영역도 남고, 투명도만 처리.
+  -->
+  <div class="block color1 d-none">display: none</div>
+  <hr>
+  <div class="block color2 v-hidden">visibility: hidden</div>
+  <hr>
+  <div class="block color3 opacity-0">opacity: 0</div>
+  <hr>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

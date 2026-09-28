@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML | image</title>
+</head>
+
+<body>
+  <h1>Image</h1>
+  <!-- 
+    src 이미지경로. 절대/상대경로
+    alt 대체텍스트. 이미지로드에 실패시 화면에 노출될 텍스트. 스크린리더에 의해 해석/전달됨.
+  -->
+  <img 
+    src="../assets/image/flower1.PNG" 
+    alt="분홍색 벚꽃 이미지" 
+    style="width: 300px;">
+  <img 
+    src="/assets/image/flower1.PNG" 
+    alt="분홍색 벚꽃 이미지" 
+    style="width: 300px;">
+  <img 
+    src="https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*" 
+    alt="아기 리트리버" 
+    style="width: 300px;">
+
+  <h2>절대 | 상대 단위</h2>
+  <h3>px 절대단위</h3>
+  <div>
+    <img src="../assets/image/flower1.PNG" width="100px" alt="">
+    <img src="../assets/image/flower2.PNG" width="100px" alt="">
+    <img src="../assets/image/flower3.PNG" width="100px" alt="">
+    <img src="../assets/image/flower4.PNG" width="100px" alt="">
+    <img src="../assets/image/flower5.PNG" width="100px" alt="">
+  </div>
+  <h3>% 상대(가변)단위</h3>
+  <!-- 부모태그 기준으로 상대크기를 결정 -->
+  <div>
+    <img src="../assets/image/flower1.PNG" width="18%" alt="">
+    <img src="../assets/image/flower2.PNG" width="18%" alt="">
+    <img src="../assets/image/flower3.PNG" width="18%" alt="">
+    <img src="../assets/image/flower4.PNG" width="18%" alt="">
+    <img src="../assets/image/flower5.PNG" width="18%" alt="">
+  </div>
+
+</body>
+
+</html>

@@ -2,8 +2,38 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,venv
 
 
+# Node.js 패키지
+node_modules/
+
+# 빌드 결과
+dist/
+build/
+coverage/
+
+# 환경변수 및 비밀키
+.env
+.env.*
+!.env.example
+
+# 로그
+*.log
+npm-debug.log*
+yarn-debug.log*
+
 # Python 가상환경
-sw_venv/
+web_venv/
+venv/
+.venv/
+__pycache__/
+
+# 편집기 및 운영체제
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Python 가상환경
+web_venv/
 venv/
 .venv/
 
@@ -142,6 +172,8 @@ ENV/
 env.bak/
 venv.bak/
 sw_venv/
+web_venv/
+
 
 # Spyder project settings
 .spyderproject
@@ -220,6 +252,7 @@ chroma_db/
 runs/
 results/
 *.jpg
+assets/
 
 /config.local
 /tmp

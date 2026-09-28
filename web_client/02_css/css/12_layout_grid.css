@@ -1,0 +1,68 @@
+.container {
+  background-color: royalblue;
+  padding: 10px;
+
+  display: grid;
+  /* row-gap: 0.5rem; */
+  /* column-gap: 0.5rem; */
+  gap: .5rem .5rem;
+}
+.item {
+  background-color: coral;
+  border: 1px solid white;
+  padding: 10px;
+}
+
+/* grid-template-columns */
+.container1 {
+  /* grid-template-columns: repeat(3, minmax(0, 1fr)); */
+  grid-template-columns: auto auto auto;
+}
+.item1, .item2 {
+  height: 30px;
+}
+
+/* grid-template-rows */
+/* grid-template-rows와 grid-auto-flow를 함께 작성한다. */
+/* grid-auto-flow: 셀이 배치되는 방향 지정 */
+.container2 {
+  /* grid-template-rows: repeat(3, minmax(0, 1fr)); */
+  grid-template-rows: auto auto auto;
+  grid-auto-flow: column;
+}
+
+/* grid-column-start/end | grid-row-start/end */
+.container3 {
+  /* grid-template-rows: auto auto auto; */
+  /* 이번엔 auto auto auto대신 1fr로 작성해야 한다. */
+  /* grid-template-rows: repeat(3, minmax(0, 1fr)); */
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-auto-flow: column;
+}
+.item01 {
+  /* grid-row-start: 1; */
+  /* grid-row-end: 4; */
+  grid-row: 1/4;
+}
+.item02 {
+  /* grid-column-start: 2; */
+  /* grid-column-end: 4; */
+  grid-column: 2/4;
+}
+.item03 {
+  grid-row: span 2 / span 2;
+  grid-column: span 2 / span 2;
+}
+
+/* fr | repeat | minmax */
+/* fr 그리드 트랙 사이즈를 표현하는 상대단위이지만 %와는 다르다. */
+.container4 {
+  grid-template-columns: 1fr 1.5fr 1fr;
+  /* grid-template-rows: 1fr 1fr 1fr; */
+  /* grid-template-rows: repeat(3, 1fr); */ /* 1fr 1fr 1fr와 동일 */
+  grid-template-rows: repeat(3, minmax(100px, auto));  /* 최소50px ~ 최대auto */
+}
+.item-height-200 {
+  height: 200px;
+}
+

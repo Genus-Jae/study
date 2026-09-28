@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- emmet html태그 자동완성기능 -->
+<!-- !탭 html문서 자동완성 -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Text</h1>
+
+  <!-- 제목 태그: h1~h6 -->
+  <!-- h${안녕}*6 --> 
+  <h1>안녕</h1>
+  <h2>안녕</h2>
+  <h3>안녕</h3>
+  <h4>안녕</h4>
+  <h5>안녕</h5>
+  <h6>안녕</h6>
+
+  <!-- 문단 태그: p -->
+  <!-- 개행문자/탭문자/공백문자는 그룹지어 공백 하나로 처리된다. -->
+  <p>
+    안녕하세요, 반갑습니다.
+    날씨가 춥죠?
+  </p>
+  <p>
+    안녕하세요, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;반갑습니다. <br />
+    날씨가 춥죠? <br />
+  </p>
+
+  <!-- pre태그 -->
+  <!-- pre-formatted 개행/탭/공백을 모두 그대로 출력 -->
+  <pre style="font-family: 'Courier New', Courier, monospace;">
+    안녕하세요,                           반갑습니다. 
+    날씨가 춥죠?
+  </pre>
+  <!-- pre>code -->
+  <pre>
+    <code>
+    function foo() {
+      conosole.log('foo');
+    }
+    </code>
+  </pre>
+
+  <!-- 특수문자 표현: &문자 -->
+  <!-- http://kor.pe.kr/util/4/charmap2.htm -->
+  <p>
+    &lt;p&gt;&lt;&#47;p&gt;를 &quot;표현&quot;하기
+  </p><em>안녕</em>
+
+  <!-- 수평선 태그: hr -->
+  <hr>
+
+  <h2>Phrase Tags</h2>
+  <!-- 
+    Phrase Tags: 특수한 기능을 가진 시멘틱 Semantic 태그 (의미태그) 중 text관련된 태그
+    
+    Semantic Tag: 태그의 목적과 내용을 일치시켜 사용하는 태그.
+    - 스크린리더(검색봇, 시각장애인)에 의해 해석이 가능하다.
+    - 웹접근성을 향상
+  -->
+  <em>기울여서 강조처리</em>
+  <strong>볼드체로 강조처리</strong>
+  <mark>하이라이팅 처리</mark>
+  <ins>밑줄로 강조처리</ins><br>
+  <del>취소선 처리</del><br>
+  <p>
+    <!-- abbreviation 줄임말태그 -->
+    <abbr title="Artificial Intelligence">AI</abbr>란 인공지능을 가리킨다.
+  </p>
+  <p>
+    자바에서 출력문은 <code>System.out.println();</code> 메소드를 사용한다.
+  </p>
+  <p>
+    <strong><em>웹접근성</em></strong>은 정말 중요합니다.
+  </p>
+
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>

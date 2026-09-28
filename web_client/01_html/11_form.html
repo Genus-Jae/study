@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML | Form</title>
+</head>
+
+<body>
+  <h1>Form</h1>
+  <!-- 
+    사용자입력값을 서버로 전송하기 위한 form과 input태그등을 제공 
+  
+    form태그의 속성
+    - name 폼의 이름(서버전송되지 않음. 페이지내 구분용)
+    - action 제출할 서버주소 (url)
+    - method (http메세지를 작성하는 방법)
+      - get (기본값) : 사용자입력값을 url에 query-string 형식(직렬화)으로 전달
+      - post : 사용자입력값을 http메세지 바디(직렬화)에 작성(url 확인 불가)
+    
+    **query-string작성시 key=value형식에 사용되는 key값은 name속성값이다.**
+    **form하위 input태그는 name속성을 반드시 가지고 있어야 한다.**
+  -->
+  <form name="loginFrm" action="11_form.html" method="post">
+    <label for="username">아이디</label>
+    <input type="text" id="username" name="_username">
+    <br>
+    <label for="password">비밀번호</label>
+    <input type="password" id="password" name="_password">
+    <br>
+    <input type="submit" value="로그인">
+  </form>
+
+
+  <h2>type별 input태그</h2>
+
+  <h3>텍스트 관련</h3>
+  <form action="" method="get">
+    <!-- fieldset 입력값들을 시각적으로 그룹핑 -->
+    <fieldset>
+      <legend>text관련 input태그</legend>
+
+      <label for="memberName">회원명</label>
+      <input type="text" id="memberName" name="memberName" value="홍길동" placeholder="이름을 입력하세요..." readonly required>
+      <br>
+
+      <label for="memberPw">비밀번호</label>
+      <input type="password" name="memberPw" id="memberPw" placeholder="비밀번호를 입력하세요..." value="1234" maxlength="8"
+        required>
+      <br>
+
+      <label for="searchKw">검색</label>
+      <input type="search" name="searchKw" id="searchKw" placeholder="검색어를 입력하세요...">
+      <br>
+
+      <label for="memberEmail">이메일</label>
+      <!-- email 유효성 검사지원 -->
+      <input type="email" name="memberEmail" id="memberEmail">
+      <br>
+
+      <label for="homepage">홈페이지</label>
+      <!-- url 유효성 검사지원 -->
+      <input type="url" name="homepage" id="homepage">
+      <br>
+
+      <label for="memberTel">전화번호</label>
+      <!-- 숫자키패드 제공 -->
+      <input type="tel" name="memberTel" id="memberTel">
+      <br>
+
+      <label for="memo">메모</label>
+      <textarea name="memo" id="memo" cols="10" rows="5">a
+b
+c 
+d</textarea>
+    </fieldset>
+
+    <input type="submit" value="제출">
+  </form>
+
+  <h3>숫자 관련</h3>
+  <!-- form>fieldset>legend -->
+  <form action="">
+    <fieldset>
+      <legend>number관련 input</legend>
+      <label for="cnt">개수</label>
+      <input type="number" name="cnt" id="cnt" min="1" max="10" value="1" step="2">
+      <br>
+
+      <label for="score">점수</label>
+      <input type="range" name="score" id="score" min="0" max="100">
+      <br>
+
+    </fieldset>
+
+    <input type="submit" value="제출">
+  </form>
+
+  <h3>날짜/시간 관련</h3>
+  <form action="">
+    <fieldset>
+      <legend>날짜/시간관련 input</legend>
+      <label for="someday">날짜</label>
+      <input type="date" name="someday" id="someday" value="1999-09-09">
+      <br>
+
+      <label for="sometime">시각</label>
+      <input type="time" name="sometime" id="sometime" value="21:30">
+      <br>
+
+      <label for="when">날짜/시각</label>
+      <input type="datetime-local" name="when" id="when" value="1999-09-09T16:16">
+    </fieldset>
+    <input type="submit" value="제출">
+  </form>
+
+  <h3>선택관련</h3>
+  <form action="">
+    <fieldset>
+      <legend>선택관련 input</legend>
+      <!-- 단일선택 input:radio -->
+      <div>
+        성별 :
+        <label for="gender-male">남</label>
+        <input type="radio" name="gender" id="gender-male" value="M" checked>
+        <label for="gender-female">여</label>
+        <input type="radio" name="gender" id="gender-female" value="F">
+      </div>
+
+      <!-- radio/checkbox의 기본value는 on-->
+      <div>
+        <label for="sms">SMS수신</label>
+        <input type="checkbox" name="sms" id="sms">
+      </div>
+
+      <!-- 복수선택 input:checkbox -->
+      <div>
+        취미 :
+        <input type="checkbox" name="hobby" id="hobby-game" value="GAME" checked>
+        <label for="hobby-game">게임</label>
+        <input type="checkbox" name="hobby" id="hobby-movie" value="MOVIE">
+        <label for="hobby-movie">영화</label>
+        <input type="checkbox" name="hobby" id="hobby-music" value="MUSIC">
+        <label for="hobby-music">음악</label>
+      </div>
+
+
+      <!-- 단일/복수 선택 select -->
+      <select name="menu" id="menu" multiple>
+        <option value="">== 메뉴선택 ==</option>
+        <option value="된">된장찌게</option>
+        <option value="순" selected>순두부찌게</option>
+        <option value="김">김치찌게</option>
+      </select>
+      <br>
+
+      <!-- 선택 & 선택지 없으면 작성 datalist -->
+      <label for="userBrowser">브라우져 선택</label>
+      <input type="text" name="userBrowser" id="userBrowser" list="browsers">
+      <datalist id="browsers">
+        <!-- 
+        <option value="Edge">엣지</option>
+        <option value="Chrome">크롬</option>
+        <option value="Firefox">파이어폭스</option> 
+        -->
+        <option value="Edge" />
+        <option value="Chrome" />
+        <option value="Firefox" />
+      </datalist>
+
+    </fieldset>
+    <input type="submit" value="제출">
+  </form>
+
+  <h3>버튼 태그</h3>
+  <!-- 버튼 태그를 만드는 2가지 방법 -->
+  <!-- 1. input -->
+  <div>
+    <input type="button" value="버튼">
+    <input type="reset" value="초기화">
+    <input type="submit" value="제출">
+  </div>
+  <!-- 2. button-->
+  <!-- div>button[type]*3 -->
+  <div>
+    <button type="button">버튼</button>
+    <button type="reset">초기화</button>
+    <button type="submit">제출</button><!-- type=submit 기본값 -->
+    <button>제출</button>
+  </div>
+
+  <h3>기타 input</h3>
+  <form action="">
+    <fieldset>
+      <legend>기타 input</legend>
+      <div>
+        <label for="favoriteColor">선호색상</label>
+        <input type="color" name="favoriteColor" id="favoriteColor" value="#00ffcc">
+      </div>
+
+      <div>
+        <label for="upFile">파일선택</label>
+        <input type="file" name="upFile" id="upFile">
+      </div>
+
+      <div>
+        <!-- 사용자한테 노출없이 서버로 전송 -->
+        <input type="hidden" name="val" value="123">
+      </div>
+      <div>
+        <!-- 노출은 되지만 서버로 전송되지 않음. disabled -->
+        <input type="text" name="name" value="홍길동" disabled>
+      </div>
+    </fieldset>
+
+  </form>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>

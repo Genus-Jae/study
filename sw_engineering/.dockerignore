@@ -1,0 +1,10 @@
+sw_venv/
+venv/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.git/
+.dvc/cache/
+.dvc/tmp/
+.vscode/

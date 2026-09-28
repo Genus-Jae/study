@@ -1,0 +1,53 @@
+div, section, header, aside, footer { padding: 10px; }
+div#container {
+    background-color: #f0f0f0;
+    width: 960px;
+    margin: 0 auto;
+}
+header {
+    background-color: #908886;
+    height: 100px;
+}
+nav {
+    transform: translateY(-10px);
+    font-size: 14px;
+}
+nav ul {
+    list-style: none;
+    width: 420px;
+    margin-left: auto;
+    transform: translateY(10px);
+    display: flex;
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 0 10px;
+}
+nav ul li:not(:last-of-type)::after {
+    content: "|";
+}
+nav ul li a:hover {
+    color: white;
+}
+main {
+    display: flex;
+}
+section#content {
+    background-color: #f5f5f5;
+    width: 640px;
+    min-height: 500px;
+}
+aside {
+    background-color: #dcdad9;
+    width: 280px;
+    min-height: 500px;
+}
+footer {
+    background-color: #555555;
+    text-align: center;
+    padding-bottom: 30px;
+}
+footer h3 {
+    text-align: left;
+}

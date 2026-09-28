@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹의 역사와 현재</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #475569;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #1e293b;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: var(--text-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            margin-top: 25px;
+            font-size: 1.2rem;
+        }
+
+        p {
+            margin-bottom: 16px;
+        }
+
+        .highlight-box {
+            background-color: #eff6ff;
+            border-left: 4px solid var(--primary-color);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        code {
+            background-color: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #d63384;
+        }
+
+        pre {
+            background-color: #1e293b;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+        
+        pre code {
+            background-color: transparent;
+            color: inherit;
+            padding: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #cbd5e1;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f1f5f9;
+            font-weight: 600;
+        }
+
+        .chart-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .chart-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .caption {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>웹(Web)의 역사와 현재: 연결을 넘어 생태계로</h1>
+
+    <h2>1. 웹의 탄생: 정보 공유를 위한 시작</h2>
+    <p>웹(World Wide Web)은 1989년 <strong>팀 버너스리 경(Sir Tim Berners-Lee)</strong>이 CERN(유럽 입자 물리 연구소)에서 제안했습니다. 원래 목적은 전 세계에 흩어진 연구원들이 논문과 데이터를 쉽게 공유하기 위함이었습니다.</p>
+    <p>1990년 12월, 팀 버너스리는 세계 최초의 웹 브라우저와 웹 서버를 개발했고, 이 기술을 <strong>특허 없이 무료로 공개</strong>했습니다. 이 결정은 웹이 특정 기업의 소유물이 아닌, 인류 모두의 공공재로 폭발적인 성장을 할 수 있었던 결정적 계기가 되었습니다.</p>
+
+    <h2>2. 인터넷과 웹: 도로와 건물의 관계</h2>
+    <p>많은 사람들이 혼용하지만, 기술적으로 <strong>인터넷(Internet)</strong>과 <strong>웹(Web)</strong>은 명확히 다릅니다.</p>
+    <ul>
+        <li><strong>인터넷 (도로망):</strong> 전 세계 컴퓨터를 물리적으로 연결하는 거대한 통신 네트워크(인프라)입니다.</li>
+        <li><strong>웹 (건물/서비스):</strong> 인터넷이라는 도로 위에 지어진 정보 서비스 중 하나입니다. (이메일, FTP, 온라인 게임 등도 인터넷 도로를 사용하는 다른 건물들입니다.)</li>
+    </ul>
+    <div class="highlight-box">
+        <strong>요약:</strong> 인터넷이 없으면 웹도 존재할 수 없지만, 웹이 없어도 인터넷은 존재합니다.
+    </div>
+
+    <h2>3. 웹을 구성하는 3대 기술 (The Trinity)</h2>
+    <p>프론트엔드 개발은 다음 세 가지 기술의 협업으로 이루어집니다. 이를 인체에 비유하면 이해가 쉽습니다.</p>
+    
+    <h3>HTML (구조/뼈대)</h3>
+    <p>웹페이지의 뼈대를 만듭니다.</p>
+    <pre><code>&lt;!-- 이것은 버튼이라는 구조를 정의함 --&gt;
+&lt;button&gt;로그인&lt;/button&gt;</code></pre>
+
+    <h3>CSS (표현/피부)</h3>
+    <p>시각적인 디자인을 담당합니다.</p>
+    <pre><code>/* 버튼을 파란색으로 칠하고, 모서리를 둥글게 만듦 */
+button {
+  background-color: blue;
+  border-radius: 5px;
+}</code></pre>
+
+    <h3>JavaScript (동작/근육)</h3>
+    <p>동적인 기능을 수행합니다.</p>
+    <pre><code>// 사용자가 버튼을 클릭했을 때의 동작을 정의함
+button.addEventListener('click', () => {
+  login(); // 로그인 함수 실행
+});</code></pre>
+
+    <h2>4. 웹의 진화: 1.0에서 3.0까지</h2>
+    <p>웹은 데이터의 소유와 상호작용 방식에 따라 세대로 구분됩니다.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>세대</th>
+                <th>시기</th>
+                <th>별칭</th>
+                <th>특징</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Web 1.0</strong></td>
+                <td>~2004</td>
+                <td><strong>읽기 전용</strong><br>(Read Only)</td>
+                <td>운영자가 정보를 일방적으로 제공합니다.<br>(신문, 방송과 유사)</td>
+            </tr>
+            <tr>
+                <td><strong>Web 2.0</strong></td>
+                <td>2004~</td>
+                <td><strong>읽기/쓰기</strong><br>(Read-Write)</td>
+                <td>사용자가 직접 글과 영상을 올리고 소통합니다.<br>플랫폼(Google, Meta)이 데이터를 중앙 관리합니다.</td>
+            </tr>
+            <tr>
+                <td><strong>Web 3.0</strong></td>
+                <td>미래/현재</td>
+                <td><strong>소유</strong><br>(Read-Write-Own)</td>
+                <td>블록체인 등을 통해 개인이 자신의 데이터를<br>직접 소유하고 관리하는 탈중앙화 웹입니다.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>5. 시각화: 웹사이트 vs 모바일 앱 성장 추이</h2>
+    <p>스마트폰의 등장 이후 웹은 모바일 앱(App)이라는 강력한 경쟁자이자 파트너를 만났습니다. 아래 그래프는 2008년부터 2024년까지 두 생태계의 양적 성장을 비교한 것입니다.</p>
+    
+    <div class="chart-container">
+        <!-- 실제 이미지 경로를 사용하거나 다운로드한 이미지 파일명을 넣으세요 -->
+        <img src="https://d.pr/i/F47juu+" alt="웹사이트와 앱 성장 비교 그래프">
+        <p class="caption">그림 1: 웹사이트(파란선)와 앱(빨간선) 성장 비교 (로그 스케일)</p>
+    </div>
+
+    <h3>그래프 해석 (로그 스케일 적용)</h3>
+    <p>위 차트는 데이터 규모의 차이를 한눈에 보기 위해 <strong>로그 스케일(Log Scale)</strong>로 작성되었습니다. Y축의 한 칸이 10배의 차이를 의미한다는 점에 유의해야 합니다.</p>
+    <ul>
+        <li><strong>규모의 차이 (Height):</strong>
+            <ul>
+                <li><strong>파란선 (웹사이트):</strong> 10억(1B) 개 단위에서 움직입니다. 웹의 개방성 덕분에 그 수가 압도적으로 많습니다.</li>
+                <li><strong>빨간선 (모바일 앱):</strong> 100만(1M) 개 단위에서 움직입니다. 스토어 심사와 설치 장벽으로 인해 웹보다 수는 적습니다.</li>
+            </ul>
+        </li>
+        <li><strong>성장의 흐름 (Trend):</strong>
+            <ul>
+                <li><strong>폭발적 성장:</strong> 2010년대 초반, 스마트폰 보급과 함께 앱 시장(빨간선)이 수직 상승하며 웹을 위협했습니다.</li>
+                <li><strong>성숙과 안정:</strong> 2017년 이후 두 그래프 모두 기울기가 완만해지거나 꺾였습니다. 이는 시장이 양적 팽창에서 질적 성숙 단계로 진입했음을 의미합니다.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>결론: 경쟁과 공존</h3>
+    <p>데이터 수(Quantity)는 <strong>웹</strong>이 압도적이지만, 실제 사용 시간(Time Spent)은 <strong>앱</strong>이 전체 모바일 사용 시간의 90%를 차지하며 압도적입니다.</p>
+    <ul>
+        <li><strong>웹(Web):</strong> 검색을 통한 정보 획득, 설치 없는 접근성 (넓은 연결)</li>
+        <li><strong>앱(App):</strong> 자주 쓰는 서비스의 높은 성능과 몰입감 (깊은 사용)</li>
+    </ul>
+    <p>현대의 개발자는 이 두 플랫폼의 특성을 이해하고, 서비스 목적에 맞는 기술 스택을 선택해야 합니다.</p>
+</div>
+
+</body>
+</html>

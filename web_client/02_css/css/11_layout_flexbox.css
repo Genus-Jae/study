@@ -1,0 +1,54 @@
+/* 전체 레이아웃을 보여 주는 Flex 컨테이너 */
+.container {
+  display: flex; /* Flexbox 활성화 */
+  flex-wrap: wrap; /* 줄 넘김 허용 */
+  gap: 16px; /* 아이템 사이 간격 */
+  justify-content: space-between; /* 주 축 정렬 */
+  align-items: center; /* 교차 축 정렬 */
+  padding: 20px;
+  background: #f5f7fa;
+  height: 300px;
+}
+
+/* 각각의 Flex 아이템 */
+/*
+- flex-basis: 기준 크기로 120 px을 확보한다. 
+- flex-grow: 컨테이너에 여유 공간이 남으면 1 비율만큼 늘어난다.
+- flex-shrink: 공간이 모자라면 1 비율만큼 줄어든다.
+*/
+.item {
+  /* flex-grow:1, flex-shrink:1, flex-basis:120px */
+  /* flex: 1 1 120px;  */
+  width: 80px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 색상만 다르게 지정해 구분 */
+.item:nth-child(1) {
+  background: #ff6b6b;
+}
+.item:nth-child(2) {
+  background: #ff9f43;
+}
+.item:nth-child(3) {
+  background: #28c76f;
+}
+.item:nth-child(4) {
+  background: #00cfe8;
+}
+.item:nth-child(5) {
+  background: #7367f0;
+}
+.item:nth-child(6) {
+  background: #ea5455;
+}
+
+/* 특정 아이템 순서 바꾸기 예시 */
+.item.order-first {
+  order: -1; /* 기본값: 0(DOM작성순서대로), 음수 또는 양수 */
+}

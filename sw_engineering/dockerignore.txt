@@ -1,5 +1,0 @@
-sw_venv/
-__pycache__/
-*.pyc
-.git/
-.vscode/

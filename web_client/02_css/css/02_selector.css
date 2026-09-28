@@ -1,0 +1,127 @@
+/* 태그 선택자 */
+/* ul {
+  background-color: aquamarine;
+} */
+/* 아이디 선택자 */
+/* #foo1 {
+  font-weight: bold;
+} */
+/* 클래스 선택자 */
+.group1 {
+  color: red;
+}
+/* .group2 {
+  color:purple;
+} */
+/* .group1.group2 {
+  color: darkblue;
+} */
+/* 속성 선택자 */
+/* [title] {
+  cursor: pointer;
+} */
+/* [title=안녕2] {
+  text-decoration: underline;
+} */
+/* 혼용 */
+/* li#foo3.group2 {
+  background-color: bisque;
+} */
+/* 복수개 */
+/* #foo4, #foo5 {
+  color:chocolate;
+} */
+
+
+/* 자식 선택자 */
+/* #parent > h4 {
+  color: tomato;
+} */
+/* 후손 선택자 */
+/* #parent h4 {
+  color: tomato;
+}
+#parent > ul > li {
+  color: blue;
+}
+#parent #child > ul > li {
+  color: green;
+} */
+
+
+/* 형제선택자 */
+/* 다음 형제요소 하나 */
+/* #p1 + p {
+  color: springgreen;
+} */
+/* 다음 형제요소 모두 */
+/* #p1 ~ p {
+  text-decoration: underline;
+} */
+/* 모든 요소 선택자 * */
+/* #p1 ~ * {
+  text-decoration: underline;
+} */
+
+
+/* 가상클래스 선택자 */
+/* - 특정 상황에 작동하는 선택자 */
+#bar1:active {
+  background-color: blueviolet;
+  color: white;
+}
+#bar2:hover {
+  background-color: bisque;
+  color: green;
+}
+
+/* 위치관련 가상클래스 선택자 */
+/* child계열(위치) */
+/* #season-wrapper :first-child {
+  color: springgreen;
+} */
+/* #season-wrapper > :first-child {
+  color: springgreen;
+} */
+/* #season-wrapper p:first-child {
+  color: springgreen;
+} */
+/* #season-wrapper :last-child {
+  color: springgreen;
+} */
+/* #season-wrapper :nth-child(3) {
+  color: springgreen;
+} */
+/* #season-wrapper :nth-child(2n + 1) {
+  color: springgreen;
+} */
+
+/* of-type계열(타입별 위치) */
+/* #season-wrapper p:first-of-type {
+  color: springgreen;
+} */
+/* #season-wrapper p:last-of-type {
+  color: springgreen;
+} */
+
+
+/* 부정선택자 */
+/* #client-langs li:not(#css3) {
+  color:turquoise;
+} */
+
+/* 루트선택자 */
+/* :root {
+  background-color: bisque;
+} */
+
+
+/* 가상요소 선택자 */
+/* ::before 시작태그와 내용사이 */
+#price-list li::before {
+  content: '￦';
+}
+/* ::after 종료태그와 내용사이 */
+#price-list li::after {
+  content: '🍔'
+}

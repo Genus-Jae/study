@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS | Selector</title>
+  <link rel="stylesheet" href="css/02_selector.css">
+</head>
+<body>
+  <h1>Selector 선택자</h1>
+  <a href="https://www.w3schools.com/cssref/css_selectors.php">CSS Selector Reference</a>
+  
+  <h2>tag | id | class | attribute 선택자</h2>
+  <!-- div>ul>li#foo$.group{안녕$}*5 -->
+  <div>
+    <ul>
+      <li id="foo1" class="group1">안녕1</li>
+      <li id="foo2" class="group1" title="안녕2">안녕2</li>
+      <li id="foo3" class="group2" title="안녕3">안녕3</li>
+      <li id="foo4" class="group2">안녕4</li>
+      <li id="foo5" class="group1 group2">안녕5</li>
+    </ul>
+  </div>
+
+  <h2>자식 | 후손 선택자</h2>
+  <!-- div#parent>h4+ul>li*2 -->
+  <div id="parent">
+    <h4>Hello</h4>
+    <ul>
+      <li>안녕하세요</li>
+      <li>니하오</li>
+    </ul>
+    <div id="child">
+      <h4>Byebye</h4>
+      <ul>
+        <li>잘가요</li>
+        <li>짜이찌엔</li>
+      </ul>
+    </div>  
+  </div>
+
+  <h2>형제 선택자</h2>
+  <!-- div>p#p${Helloworld$}*5+pre{Helloworld6} -->
+  <div>
+    <p id="p1">Helloworld1</p>
+    <p id="p2">Helloworld2</p>
+    <p id="p3">Helloworld3</p>
+    <p id="p4">Helloworld4</p>
+    <p id="p5">Helloworld5</p>
+    <pre>Helloworld6</pre>
+  </div>
+
+  <h2>가상클래스 선택자</h2>
+  <!-- div>(p#bar$>lorem)*2 -->
+  <div>
+    <p id="bar1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima quae cum, omnis laborum doloribus qui necessitatibus dignissimos ducimus ex blanditiis veritatis deleniti eaque maxime amet excepturi! Rerum nam quisquam dolorum.</p>
+    <p id="bar2">Mollitia dolorem maiores perspiciatis nisi voluptatum delectus magni ratione quis nemo cum sed quia doloribus quibusdam, blanditiis ipsa officiis facere animi deleniti dicta soluta exercitationem! Officia esse quas provident eos!</p>
+  </div>
+  
+
+  <div id="season-wrapper">
+    <p>봄</p>
+    <p>여름</p>
+    <p>가을</p>
+    <p>겨울</p>
+    <p>봄</p>
+    <p>여름</p>
+    <p>가을</p>
+    <ul>
+      <li>spring</li>
+      <li>summer</li>
+      <li>autumn</li>
+      <li>winter</li>
+      <li>spring</li>
+      <li>summer</li>
+      <li>autumn</li>
+      <li>winter</li>
+    </ul>
+    <p>겨울</p>
+  </div>
+
+  <div>
+    <ul id="client-langs">
+      <li>HTML5</li>
+      <li id="css3">CSS3</li>
+      <li>JAVASCRIPT</li>
+    </ul>
+  </div>
+
+
+  <h2>가상요소 선택자</h2>
+  <ul id="price-list">
+    <li>3000</li>
+    <li>10000</li>
+    <li>500</li>
+  </ul>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

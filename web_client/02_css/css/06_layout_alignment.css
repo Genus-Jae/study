@@ -1,0 +1,32 @@
+.parent {
+  background-color: bisque;
+  text-align: center;
+}
+.parent span {
+  background-color: hotpink; 
+}
+.box {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #000; /* #rrggbb #rgb */
+  background-color: aquamarine;
+  /* center 위아래 좌우 */
+  margin: 0 auto;
+  /* right */
+  /* margin-left: auto; */
+  /* left */
+  /* margin-right: auto; */
+}
+
+.item {
+  width: 150px;
+  height: 150px;
+  background-color: aquamarine;
+  border: 2px solid #000;
+  margin:  0 auto;
+  
+  /* 수평/수직 정렬 */
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+}

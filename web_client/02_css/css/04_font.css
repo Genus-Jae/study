@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Dongle:wght@300;400;700&display=swap');
+/* 폰트 종류구분 */
+/* serif 글자끝에 삐침 있음 */
+/* sans-serif 글자끝에 삐침 없음 */
+/* cursive 필기체 */
+/* monospace 글자간격 모두 동일 */
+
+* {
+  font-size: 24px;
+}
+#font1 {
+  /* 폰트나열, 왼쪽부터 존재하는지 검사후 적용, 마지막 generic-family 작성 */
+  font-family: consolas, monospace;
+}
+#font2 {
+  /* font-family: 'Dongle', sans-serif; */
+  /* font-size: 48px; */
+  /* 300(light) 400(regular) 700(bold) */
+  /* font-weight: bold;  */
+  /* font-style: italic; */
+  /* line-height: 48px;  */
+
+  /* 모아쓰기 shorthand */
+  /* font: font-style font-weight font-size/line-height font-family */
+  font: italic bold 48px/48px 'Dongle', sans-serif;
+}
+#font3 {
+  font-family: "Gaegu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#parent {
+  font-size: 32px;
+}
+html {
+  font-size: 50px;
+}
+
+#parent :first-child {
+  font-size: 24px; /* 절대크기 */
+}
+#parent :nth-child(2) {
+  font-size: 150%; /* 부모요소 상대크기 */
+}
+#parent :nth-child(3) {
+  font-size: 1.5em; /* 부모요소 상대크기 */
+}
+#parent :last-child {
+  font-size: 1.5rem; /* 루트요소 상대크기 */
+}

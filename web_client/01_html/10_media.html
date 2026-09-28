@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML | Media</title>
+</head>
+<body>
+  <h1>Media</h1>
+  <!-- 
+    html5에서는 미디어 관련해서 별도의 플러그인 없이 재생이 가능하다.
+  -->
+  <h2>audio</h2>
+  <!-- 속성명,속성값이 동일한 경우, 속성값부분 생략가능 -->
+  <audio
+    src="../assets/audio/major.mp3" 
+    autoplay
+    muted
+    loop
+    controls></audio>
+  
+  <audio controls>
+    <!-- 같은 컨텐츠를 여러확장자로 준비하는 경우, 디바이스별로 최적화된 자원을 재생 -->
+    <source src="../assets/audio/major.mp3">
+  </audio>
+
+  <h2>video</h2>
+
+  <video 
+    src="../assets/video/small.mp4" 
+    width="500px"
+    muted
+    loop
+    poster="../assets/image/city1.PNG"
+    controls></video>
+
+  <video>
+    <!-- 
+      디바이스별로 최적화된 자원을 선택재생
+      - pc browser인 경우 mp4/webm/ogg 순으로 선호
+      - mobile browser인 경우 mp4/3gp 순으로 선호
+
+      서버부하를 줄이기위해 용량이 큰 동영상파일은 
+      별도의 미디어서버 또는 youtube, vimeo등을 통해 제공하는 것이 좋다.
+    -->
+    <source src="../assets/video/small.webm" type="video/webm">
+    <source src="../assets/video/small.ogv" type="video/ogg">
+    <source src="../assets/video/small.mp4" type="video/mp4">
+  </vide>
+
+
+  
+</body>
+</html>

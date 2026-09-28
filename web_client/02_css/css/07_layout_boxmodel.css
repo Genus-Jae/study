@@ -1,0 +1,37 @@
+.item {
+  width: 300px;
+  height: 300px;
+  background-color: chartreuse;
+  border: 5px solid #000;
+  /* padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px; */
+
+  /* top right bottom left */
+  /* 생략된 자리는 맞은편 값을 적용한다. */
+  /* padding: 10px 10px 10px 10px; */
+  /* padding: 10px 20px; */
+  padding: 10px;
+  margin: 5px;
+}
+
+.item span {
+  width: 100px; /* inline 요소 적용안됨 */
+  height: 100px; /* inline 요소 적용안됨 */
+  padding: 5px;
+  margin: 50px 30px; /* inline 요소 위아래 적용안됨 */
+}
+
+.box {
+  margin: 50px auto;
+  width: 100px;
+  height: 100px;
+  background-color: blueviolet;
+}
+.box:hover {
+  /* x-offset y-offset blur spread color */
+  /* - blur 번짐정도 */
+  /* - spread 그림자크기 */
+  box-shadow: 6px 11px 112px 23px gray;
+}
